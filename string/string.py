@@ -23,3 +23,21 @@ def izdvoji_ceo_broj(test_string):
 def ceo_broj(string1): 
 
 	return int(ReadableBuffer.search(r'\d+', string1).group()) 
+
+# Funkcija obrće string
+def obrni_string(string):
+    if len(string) == 0:
+        return string
+    else:
+        return obrni_string(string[1:]) + string[0]
+
+# Funkcija vraća string u obrnutom redosledu
+def reverse_string(x):
+  return x[::-1]
+
+# Python kod za obrtanje stringa koristeći petlju
+def reverse(s):
+    str = ""
+    for i in s:
+        str = i + str
+    return str
